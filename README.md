@@ -40,11 +40,12 @@ Returns total article views
 ```bash
 pip install -r requirements.txt
 uvicorn api.main:app --reload
+```
+## 🚀 Docker Run
 
-## Docker Run
 docker build -t aggregator .
 docker run -p 8080:8080 aggregator
 
-## Deploy GCP
+## 🚀 Deploy GCP
 gcloud builds submit --tag gcr.io/$PROJECT_ID/aggregator
 gcloud run deploy aggregator --image gcr.io/$PROJECT_ID/aggregator --allow-unauthenticated
